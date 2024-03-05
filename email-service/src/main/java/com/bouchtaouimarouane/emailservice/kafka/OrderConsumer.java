@@ -17,6 +17,6 @@ public class OrderConsumer {
     public void consumeMessage(OrderEvent event) {
         LOGGER.info(String.format("Order event received in email service => %s", event.toString()));
 
-        // save the order event into database
+        // send an email to the customer
     }
 }

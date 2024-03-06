@@ -13,7 +13,8 @@ public class OrderConsumer {
 
     @KafkaListener(
             topics = "${spring.kafka.topic.name}",
-            groupId = "${spring.kafka.consumer.group-id}")
+            groupId = "${spring.kafka.consumer.group-id}"
+    )
     public void consumeMessage(OrderEvent event) {
         LOGGER.info(String.format("Order event received in email service => %s", event.toString()));
 
